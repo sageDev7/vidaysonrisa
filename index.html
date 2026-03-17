@@ -6,7 +6,6 @@
   <title>Vida y Sonrisa – Policlínico Odontopediátrico | Resistencia, Chaco</title>
   <meta name="description" content="Odontopediatra en Resistencia, Chaco. Dentista para niños, ortodoncia infantil, ortopedia maxilar y sedación consciente. Policlínico Vida y Sonrisa."/>
   <meta name="keywords" content="odontopediatra, dentista para niños, ortodoncia infantil, ortopedia maxilar, sedación consciente odontológica, odontología infantil, Resistencia Chaco"/>
-  <link rel="icon" href="./favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -232,6 +231,33 @@
   .wa{position:fixed;bottom:22px;right:22px;z-index:888;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.4rem;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:transform .22s}
   .wa:hover{transform:scale(1.08)}
 
+  /* ── ESTILOS ATENCION INTEGRAL ── */
+  #atencion { padding: 96px 0; background-color: var(--pink); color: #fff; }
+  .at-head { text-align: center; margin-bottom: 1.5rem; }
+  .at-intro { text-align: center; max-width: 700px; margin: 0 auto 3rem; font-weight: 600; font-size: 1rem; opacity: 0.9; line-height: 1.6; }
+  .at-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .at-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 24px; padding: 2.5rem 2rem; text-align: center; transition: transform 0.3s; }
+  .at-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.18); }
+  .at-ico { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.5rem; background: #fff; }
+  .at-ico-p { color: var(--pink); }
+  .at-ico-g { color: var(--green); }
+  .at-ico-o { color: var(--gold); }
+  .at-h3 { font-family: var(--display); font-size: 1.25rem; margin-bottom: 1rem; }
+  .at-p { font-size: 0.85rem; line-height: 1.7; opacity: 0.85; }
+
+  /* ── ESTILOS EQUIPO ── */
+  #equipo { padding: 96px 0; background-color: var(--gold); }
+  .eq-head { text-align: center; margin-bottom: 4rem; }
+  .eq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+  .eq-card { background: #fff; border-radius: 28px; padding: 3rem 2rem 2rem; text-align: center; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+  .eq-avatar { width: 90px; height: 90px; background: var(--pink-lt); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 2rem; font-weight: 700; color: var(--pink); position: absolute; top: -45px; left: 50%; transform: translateX(-50%); border: 6px solid var(--gold); }
+  .eq-name { font-family: var(--display); font-size: 1.4rem; color: var(--dark); margin-bottom: 0.4rem; font-weight: 700; }
+  .eq-role { font-size: 0.75rem; font-weight: 800; color: var(--pink); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.2rem; display: block; }
+  .eq-desc { font-size: 0.88rem; color: var(--gray); line-height: 1.6; margin-bottom: 1.5rem; min-height: 4.8rem; }
+  .eq-mp { font-size: 0.7rem; font-weight: 700; color: #aaa; margin-bottom: 1.5rem; display: block; }
+  .eq-contact-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 700; color: var(--dark); border-top: 1px solid #eee; padding-top: 1.2rem; width: 100%; justify-content: center; transition: color 0.2s; }
+  .eq-contact-btn:hover { color: var(--green-d); }
+
   /* ── RESPONSIVE ── */
   @media(max-width:1024px){
     .hero-inner{grid-template-columns:1fr;gap:2.4rem}
@@ -272,6 +298,7 @@
 
     .exp-head{text-align:center}
     .exp-grid{grid-template-columns:1fr}
+    .eq-grid{grid-template-columns:1fr !important}
 
     .test-head{text-align:center}
     .test-grid{grid-template-columns:1fr}
@@ -297,6 +324,11 @@
 
     #mapa iframe{height:300px}
     #sobre,#servicios,#sedación,#experiencia,#testimonios,#turnos,#instagram{padding:64px 0}
+
+    @media(max-width: 768px) {
+        .at-grid { grid-template-columns: 1fr; }
+        .eq-grid { grid-template-columns: 1fr; gap: 5rem; }
+    }
   }
   @media(max-width:480px){
     .hero-ctas{flex-direction:column;align-items:center}
@@ -304,6 +336,7 @@
     .turnos-btns{flex-direction:column;align-items:center}
     .pillar-strip{grid-template-columns:1fr}
     .exp-grid{grid-template-columns:1fr}
+    .eq-grid{grid-template-columns:1fr !important}
     .tabs{gap:.3rem}
     .tb{font-size:.7rem;padding:.52rem .9rem}
   }
@@ -457,21 +490,116 @@
   </div>
 </section>
 <div style="display:block;overflow:hidden;line-height:0;margin-bottom:-2px;background:var(--green-lt)"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--gold)"/></svg></div>
-<section id="testimonios" class="dp">
+<section id="juancruz" class="dp" style="background-color:var(--gold)">
   <div class="wrap">
     <div class="test-head reveal">
-      <span class="eyebrow ew">Opiniones reales</span>
-      <h2 class="sec-h2 hw">Lo que dicen las familias</h2>
+      <span class="eyebrow ew">Odontología para adultos</span>
+      <h2 class="sec-h2 hw">Dr. Juan Cruz Aguilar</h2>
     </div>
-    <div class="test-grid reveal" style="transition-delay:.1s">
-      <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-txt">"Mi hijo tenia mucho miedo al dentista y gracias a la sedación pudo atenderse tranquilo. La doctora fue increible, muy paciente y carinosa."</p><div class="tcard-author"><div class="tcard-av">M</div><div><div class="tcard-name">Mama de Mateo</div><div class="tcard-role">Paciente · Ortodoncia</div></div></div></div>
-      <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-txt">"La doctora explico todo el tratamiento de ortodoncia paso a paso. Mi hija salio feliz de cada consulta. Lo recomiendo totalmente."</p><div class="tcard-author"><div class="tcard-av">S</div><div><div class="tcard-name">Sofia G.</div><div class="tcard-role">Mama · 2 hijos pacientes</div></div></div></div>
-      <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-txt">"Lleve a mi bebe de 2 años y el equipo fue muy profesional. El ambiente es muy lindo, los chicos se sienten en casa."</p><div class="tcard-author"><div class="tcard-av">V</div><div><div class="tcard-name">Valeria R.</div><div class="tcard-role">Mama · Odontopediatría</div></div></div></div>
-      <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-txt">"Excelente atención, muy puntuales y organizados. Mi hijo ya no le tiene miedo al dentista. Son lo mejor en Resistencia."</p><div class="tcard-author"><div class="tcard-av">C</div><div><div class="tcard-name">Carlos M.</div><div class="tcard-role">Papa · Ortopedia maxilar</div></div></div></div>
+    <div class="sed-grid reveal" style="transition-delay:.1s">
+      <div>
+        <p class="bt bw" style="margin-bottom:1.4rem">El Dr. Juan Cruz Aguilar es nuestro odontólogo especializado en adultos. Junto al equipo de Vida y Sonrisa, ofrece atención odontológica general para acompañar la salud bucal en cada etapa de la vida.</p>
+        <p class="bt bw" style="margin-bottom:2rem">Comparte el espacio y el compromiso del policlínico: atención personalizada, diagnóstico preciso y tratamientos orientados al bienestar integral del paciente.</p>
+        <div class="cl" style="margin-bottom:2rem">
+          <div class="ci ciw"><i class="fa-solid fa-circle-check"></i> Odontología general para adultos</div>
+          <div class="ci ciw"><i class="fa-solid fa-circle-check"></i> Prevención, diagnóstico y tratamientos</div>
+          <div class="ci ciw"><i class="fa-solid fa-circle-check"></i> Salud bucal en todas las etapas de la vida</div>
+        </div>
+        <a href="https://wa.me/5493624991088" target="_blank" class="btn btn-white" style="color:var(--dark)">
+          <i class="fa-brands fa-whatsapp" style="color:#25D366"></i> Consultar turno
+        </a>
+      </div>
+      <div class="sed-cards">
+        <div class="sc-card"><i class="fa-solid fa-tooth"></i><div><h4>Consultas y diagnóstico</h4><p>Evaluación completa del estado bucal y plan de tratamiento personalizado.</p></div></div>
+        <div class="sc-card"><i class="fa-solid fa-shield-halved"></i><div><h4>Prevención y limpieza</h4><p>Detartraje, fluorización y educación para mantener una boca sana.</p></div></div>
+        <div class="sc-card"><i class="fa-solid fa-star-of-life"></i><div><h4>Tratamientos integrales</h4><p>Caries, endodoncia, restauraciones y seguimiento continuo del paciente adulto.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
-<div style="display:block;overflow:hidden;line-height:0;margin-bottom:-2px;background:var(--gold)"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--dark)"/></svg></div>
+
+
+<div style="display:block; overflow:hidden; line-height:0; background:var(--gold);">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--pink)"/>
+  </svg>
+</div>
+<!-- ATENCION INTEGRAL -->
+
+
+<section id="atencion" class="dp">
+  <div class="wrap">
+    <div class="at-head reveal">
+      <span class="eyebrow ew">Más allá de la odontología</span>
+      <h2 class="sec-h2 hw">Atención integral para toda la familia</h2>
+    </div>
+    <p class="at-intro reveal">En Vida y Sonrisa contamos con un equipo interdisciplinario que acompaña el desarrollo y bienestar de niños, adolescentes y adultos.</p>
+    <div class="at-grid reveal" style="transition-delay:.1s">
+      <div class="at-card">
+        <div class="at-ico at-ico-p"><i class="fa-solid fa-child"></i></div>
+        <h3 class="at-h3">Medicina Pediátrica</h3>
+        <p class="at-p">Seguimiento del crecimiento, desarrollo y vacunación para garantizar la salud de los más pequeños desde el primer día.</p>
+      </div>
+      <div class="at-card">
+        <div class="at-ico at-ico-g"><i class="fa-solid fa-brain"></i></div>
+        <h3 class="at-h3">Psicopedagogía</h3>
+        <p class="at-p">Acompañamiento en procesos de aprendizaje, orientación escolar y desarrollo de habilidades cognitivas y emocionales.</p>
+      </div>
+      <div class="at-card">
+        <div class="at-ico at-ico-o"><i class="fa-solid fa-tooth"></i></div>
+        <h3 class="at-h3">Odontología General</h3>
+        <p class="at-p">Atención especializada para adultos, cubriendo prevención, restauraciones y salud bucal integral para padres y adolescentes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="display:block;overflow:hidden;line-height:0;margin-bottom:-2px;background:var(--pink)"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--gold)"/></svg></div>
+
+<section id="equipo" class="dp">
+  <div class="wrap">
+    <div class="eq-head reveal">
+      <span class="eyebrow ew">Nuestro equipo</span>
+      <h2 class="sec-h2 hw">Los profesionales detrás de cada sonrisa</h2>
+    </div>
+    <div class="eq-grid reveal" style="transition-delay:.1s">
+      <div class="eq-card">
+        <div class="eq-avatar">V</div>
+        <h3 class="eq-name">Vanina M. López Bravo</h3>
+        <span class="eq-role">Odontopediatría · Ortodoncia</span>
+        <p class="eq-desc">Especialista en odontología pediátrica y ortopedia maxilar, dedicada a crear experiencias positivas para los niños.</p>
+        <span class="eq-mp">M.P. 1450</span>
+        <a href="https://wa.me/5493624991088" class="eq-contact-btn"><i class="fa-brands fa-whatsapp"></i> 362 499-1088</a>
+      </div>
+      <div class="eq-card">
+        <div class="eq-avatar" style="background:var(--green-lt); color:var(--green)">JC</div>
+        <h3 class="eq-name">Juan Cruz Aguilar</h3>
+        <span class="eq-role">Odontología General</span>
+        <p class="eq-desc">Atención integral para adultos y adolescentes, enfocada en la salud funcional y estética dental de toda la familia.</p>
+        <span class="eq-mp">M.P. 2263</span>
+        <a href="https://wa.me/5493624991088" class="eq-contact-btn"><i class="fa-brands fa-whatsapp"></i> 362 499-1088</a>
+      </div>
+      <div class="eq-card">
+        <div class="eq-avatar" style="background:var(--pink-lt); color:var(--pink)">R</div>
+        <h3 class="eq-name">Dra. Roxana Sandrigo</h3>
+        <span class="eq-role">Médica Pediatra</span>
+        <p class="eq-desc">Especialista en el cuidado de la salud infantil, acompañando el crecimiento sano de tus hijos.</p>
+        <span class="eq-mp">M.P. 5653</span>
+        <a href="https://wa.me/5493624048555" class="eq-contact-btn"><i class="fa-brands fa-whatsapp"></i> 362 404-8555</a>
+      </div>
+      <div class="eq-card">
+        <div class="eq-avatar" style="background:var(--gold-lt); color:var(--gold)">C</div>
+        <h3 class="eq-name">Claudia Aguirre</h3>
+        <span class="eq-role">Psicopedagoga</span>
+        <p class="eq-desc">Acompañamiento especializado para potenciar el aprendizaje y desarrollo cognitivo en la infancia.</p>
+        <span class="eq-mp">M.P. XXXX</span>
+        <a href="https://wa.me/5493624949943" class="eq-contact-btn"><i class="fa-brands fa-whatsapp"></i> 362 494-9943</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section id="turnos" class="dp">
   <div class="wrap">
     <div class="turnos-wrap reveal">
